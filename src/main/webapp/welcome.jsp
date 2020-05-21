@@ -9,7 +9,7 @@
          <input type = "submit" value = "Login" />
          <input type = "reset" value="Reset" />
          <br />
-          New User <a href="register.jsp">Register Here--Happy</a>
+          New User <a href="register.jsp">Register Here--Change 1</a>
       </form>
       
    </body>
