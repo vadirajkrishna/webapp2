@@ -26,7 +26,8 @@
     //out.println("select * from user where userName='" +username+ "' and password='" +password + "'");
     rs = st.executeQuery("select * from USER where username='" + username + "' and password='" +password + "'");
     if (rs.next()) {
-        session.setAttribute("userid", username);
+    	session.setAttribute("host", ip);
+    	session.setAttribute("userid", username);
         response.sendRedirect("success.jsp");
     } else {
         out.println("Invalid password <a href='welcome.jsp'>try again</a>");
