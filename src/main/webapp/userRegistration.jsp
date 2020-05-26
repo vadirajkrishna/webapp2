@@ -6,7 +6,7 @@
     String firstName = request.getParameter("firstName");
     String lastName = request.getParameter("lastName");
     String email = request.getParameter("email");
-    String ip = session.getAttribute("host");
+    String ip = (String)session.getAttribute("host");
     
     String jdbc = "jdbc:mysql://" + ip + ":3306/gl_work";
     Class.forName("com.mysql.jdbc.Driver");
