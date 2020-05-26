@@ -6,13 +6,15 @@
     String firstName = request.getParameter("firstName");
     String lastName = request.getParameter("lastName");
     String email = request.getParameter("email");
-    //String ip = request.getParameter("ip");
-    //String ip = (String)session.getAttribute("host");
     
-    String host = System.getenv("host");
-    String jdbc = "jdbc:mysql://" + host + ":3306/gl_work";
+    String db_host = System.getenv("DB_HOST");
+    String db_user = System.getenv("DB_USER");
+    String db_password = System.getenv("DB_PASSWORD");
+    String db_port = System.getenv("DB_PORT");
+    String jdbc = "jdbc:mysql://" + db_host + ":" + db_port + "/gl_work";
     Class.forName("com.mysql.jdbc.Driver");
    
+    Connection con = DriverManager.getConnection(jdbc, db_user, db_password);
     //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gl_work", "root", "Mysql@123");
     //Connection con = DriverManager.getConnection("jdbc:mysql://54.211.54.14:6703/gl_work", "root", "mypassword");
     
