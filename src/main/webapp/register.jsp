@@ -10,8 +10,6 @@
 
 		Enter Information Here
 		<br />
-		Update Host Name: <input type = "text" name = "ip" />
-		<br />
 		First Name 	<input type="text" name="firstName"/> <br />
         Last Name 	<input type="text" name="lastName"/> <br />
         Email 		<input type="text" name="email" /> <br />
