@@ -1,12 +1,18 @@
-
 <%@ page import="java.sql.*"%>
 <%
     
-	String username = request.getParameter("username");    
+    String ip = request.getParameter("ip");
+    String username = request.getParameter("username");    
     String password = request.getParameter("password");
     Class.forName("com.mysql.cj.jdbc.Driver");
-    //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gl_work", "root", "Mysql@123");
-    Connection con = DriverManager.getConnection("jdbc:mysql://54.211.54.14:6703/gl_work", "root", "mypassword");
+    
+    String db_user = System.getenv("db_user");
+    out.println("DB_USER: " + db_user);
+    
+    String jdbc = "jdbc:mysql://" + ip + ":3306/gl_work";
+    Connection con = DriverManager.getConnection(jdbc, "root", "mypassword");
+    //Connection con = DriverManager.getConnection("jdbc:mysql://54.166.18.212:3306/gl_work", "root", "mypassword");
+    //Connection con = DriverManager.getConnection("jdbc:mysql://54.211.54.14:6703/gl_work", "root", "mypassword");
     Statement st = con.createStatement();
     ResultSet rs;
     /*if (username.equals("Test")) {
