@@ -1,4 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% 
+String ip = request.getParameter("ip");
+session.setAttribute("host", ip);
+out.println(session.getAttribute("host"));
+%>
 <!DOCTYPE html>
 <html>
     <head>
