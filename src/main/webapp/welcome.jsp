@@ -11,7 +11,7 @@
          <br />
           New User <a href="register.jsp">Register Here</a>
           <br />
-          Update Host Name: <input type = "text" name = "ip" />
+          <!--  Update Host Name: <input type = "text" name = "ip" />-->
       </form>
       
    </body>

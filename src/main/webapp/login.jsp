@@ -6,10 +6,10 @@
     String password = request.getParameter("password");
     Class.forName("com.mysql.cj.jdbc.Driver");
     
-    String db_user = System.getenv("db_user");
-    out.println("DB_USER: " + db_user);
-    session.setAttribute("host", ip);
-    String jdbc = "jdbc:mysql://" + ip + ":3306/gl_work";
+    String host = System.getenv("host");
+    //out.println("DB_USER: " + db_user);
+    //session.setAttribute("host", ip);
+    String jdbc = "jdbc:mysql://" + host + ":3306/gl_work";
     Connection con = DriverManager.getConnection(jdbc, "root", "mypassword");
     //Connection con = DriverManager.getConnection("jdbc:mysql://54.166.18.212:3306/gl_work", "root", "mypassword");
     //Connection con = DriverManager.getConnection("jdbc:mysql://54.211.54.14:6703/gl_work", "root", "mypassword");

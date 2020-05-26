@@ -1,9 +1,4 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% 
-String ip = request.getParameter("ip");
-session.setAttribute("host", ip);
-out.println(session.getAttribute("host"));
-%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +9,8 @@ out.println(session.getAttribute("host"));
         <form method="GET" action="userRegistration.jsp">
 
 		Enter Information Here
+		<br />
+		Update Host Name: <input type = "text" name = "ip" />
 		<br />
 		First Name 	<input type="text" name="firstName"/> <br />
         Last Name 	<input type="text" name="lastName"/> <br />
